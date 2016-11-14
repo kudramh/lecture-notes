@@ -1,0 +1,57 @@
+Namespaces:
+  =: gob.mx.app
+  std: io.murano
+  res: io.murano.resources
+  sys: io.murano.system
+
+
+Name: MicroSiteServer
+
+Extends: std:Application
+
+Properties:
+
+  selectAppEnvironment:
+    Contract: $.string()
+    Default: "development"
+
+  instance:
+    Contract: $.class(res:Instance).notNull()
+
+Methods:
+  initialize:
+    Body:
+      - $._environment: $.find(std:Environment).require()
+
+  deploy:
+    Body:
+      - If: not $.getAttr(deployed, false)
+        Then:
+          - $._environment.reporter.report($this, 'Creating VM for gob.mx MicroSite Server.')
+          - $securityGroupIngress:
+            - ToPort: 80
+              FromPort: 80
+              IpProtocol: tcp
+              External: true
+            - ToPort: 443
+              FromPort: 443
+              IpProtocol: tcp
+              External: true
+            - ToPort: 3000
+              FromPort: 3000
+              IpProtocol: tcp
+              External: true              
+          - $._environment.securityGroupManager.addGroupIngress($securityGroupIngress)
+          - $.instance.deploy()
+          - $resources: new(sys:Resources)
+          - $template: $resources.yaml('DeployGobMxMicroSite.template').bind(dict(appEnvironment => $.selectAppEnvironment))
+          - $._environment.reporter.report($this, 'Instance is created. Deploying gob.mx MicroSite Server')
+          - $.instance.agent.call($template, $resources)
+          - $._environment.reporter.report($this, 'MicroSite Server is installed.')
+          - If: $.instance.assignFloatingIp
+            Then:
+              - $host: $.instance.floatingIpAddress
+            Else:
+              - $host: $.instance.ipAddresses[0]
+          - $._environment.reporter.report($this, format('MicroSite Server is available at http://{0}', $host))
+          - $.setAttr(deployed, true)

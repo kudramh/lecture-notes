@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/marduk/Documents/DEVELOPMENT/WORKSPACE/KUDRAM/LectureNotes/ParallelDistributedProgramming/SharedMemory/src/ch3/pthread_hello3.c
+stdio.h
+-
+pthread.h
+-
+

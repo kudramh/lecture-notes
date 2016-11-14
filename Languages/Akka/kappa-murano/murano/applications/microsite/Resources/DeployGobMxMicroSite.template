@@ -1,0 +1,20 @@
+
+FormatVersion: 2.0.0
+Version: 1.0.0
+Name: Deploy MicroSite App
+
+Parameters:
+  appEnvironment: $appEnvironment
+
+Body: |
+  return microSiteDeploy('{0}'.format(args.appEnvironment)).stdout
+
+Scripts:
+  microSiteDeploy:
+    Type: Application
+    Version: 1.0.0
+    EntryPoint: runMicroSiteDeploy.sh
+    Files: []
+    Options:
+      captureStdout: true
+      captureStderr: true

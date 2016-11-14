@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/marduk/Documents/DEVELOPMENT/WORKSPACE/KUDRAM/LectureNotes/ParallelDistributedProgramming/SharedMemory/src/ch3/cpp11_thread7.cpp
+iostream
+-
+thread
+-
+chrono
+-
+

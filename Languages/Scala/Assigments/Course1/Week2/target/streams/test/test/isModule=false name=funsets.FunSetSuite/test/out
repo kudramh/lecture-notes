@@ -1,0 +1,9 @@
+[0m[[0minfo[0m] [0m[32mFunSetSuite:[0m[0m
+[0m[[0minfo[0m] [0m[32m- Print Sets[0m[0m
+[0m[[0minfo[0m] [0m[32m- Test Union of a and b sets[0m[0m
+[0m[[0minfo[0m] [0m[32m- Test Intersection of a and b sets[0m[0m
+[0m[[0minfo[0m] [0m[32m- Test Difference of a and b sets[0m[0m
+[0m[[0minfo[0m] [0m[32m- Test Filter on a and d sets[0m[0m
+[0m[[0minfo[0m] [0m[32m- Test ForAll on d set[0m[0m
+[0m[[0minfo[0m] [0m[32m- Test if Exist odd numbers on d set[0m[0m
+[0m[[0minfo[0m] [0m[32m- Test Map, convert d set to even set[0m[0m

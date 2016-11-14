@@ -1,0 +1,15 @@
+/Users/marduk/Documents/DEVELOPMENT/WORKSPACE/KUDRAM/LectureNotes/ParallelDistributedProgramming/SharedMemory/src/CMakeFiles/rebuild_cache.dir
+/Users/marduk/Documents/DEVELOPMENT/WORKSPACE/KUDRAM/LectureNotes/ParallelDistributedProgramming/SharedMemory/src/CMakeFiles/cpp11_thread8.dir
+/Users/marduk/Documents/DEVELOPMENT/WORKSPACE/KUDRAM/LectureNotes/ParallelDistributedProgramming/SharedMemory/src/CMakeFiles/cpp11_thread4.dir
+/Users/marduk/Documents/DEVELOPMENT/WORKSPACE/KUDRAM/LectureNotes/ParallelDistributedProgramming/SharedMemory/src/CMakeFiles/cpp11_thread6.dir
+/Users/marduk/Documents/DEVELOPMENT/WORKSPACE/KUDRAM/LectureNotes/ParallelDistributedProgramming/SharedMemory/src/CMakeFiles/cpp11_thread1.dir
+/Users/marduk/Documents/DEVELOPMENT/WORKSPACE/KUDRAM/LectureNotes/ParallelDistributedProgramming/SharedMemory/src/CMakeFiles/cpp11_thread3.dir
+/Users/marduk/Documents/DEVELOPMENT/WORKSPACE/KUDRAM/LectureNotes/ParallelDistributedProgramming/SharedMemory/src/CMakeFiles/cpp11_thread7.dir
+/Users/marduk/Documents/DEVELOPMENT/WORKSPACE/KUDRAM/LectureNotes/ParallelDistributedProgramming/SharedMemory/src/CMakeFiles/cpp11_thread2.dir
+/Users/marduk/Documents/DEVELOPMENT/WORKSPACE/KUDRAM/LectureNotes/ParallelDistributedProgramming/SharedMemory/src/CMakeFiles/pthread_retstring.dir
+/Users/marduk/Documents/DEVELOPMENT/WORKSPACE/KUDRAM/LectureNotes/ParallelDistributedProgramming/SharedMemory/src/CMakeFiles/pthread_hello4.dir
+/Users/marduk/Documents/DEVELOPMENT/WORKSPACE/KUDRAM/LectureNotes/ParallelDistributedProgramming/SharedMemory/src/CMakeFiles/pthread_hello3.dir
+/Users/marduk/Documents/DEVELOPMENT/WORKSPACE/KUDRAM/LectureNotes/ParallelDistributedProgramming/SharedMemory/src/CMakeFiles/pthread_hello2.dir
+/Users/marduk/Documents/DEVELOPMENT/WORKSPACE/KUDRAM/LectureNotes/ParallelDistributedProgramming/SharedMemory/src/CMakeFiles/cpp11_thread5.dir
+/Users/marduk/Documents/DEVELOPMENT/WORKSPACE/KUDRAM/LectureNotes/ParallelDistributedProgramming/SharedMemory/src/CMakeFiles/edit_cache.dir
+/Users/marduk/Documents/DEVELOPMENT/WORKSPACE/KUDRAM/LectureNotes/ParallelDistributedProgramming/SharedMemory/src/CMakeFiles/pthread_hello1.dir
