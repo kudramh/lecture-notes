@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1479498333357
+Build-Jdk: 1.8.0_11
+Built-By: marduk
+Bundle-Description: Provides the OSGi kudram commands
+Bundle-ManifestVersion: 2
+Bundle-Name: Apache Karaf :: Shell kudram/echo Commands
+Bundle-SymbolicName: com.kudram.command
+Bundle-Version: 1.0.0
+Created-By: Apache Maven Bundle Plugin
+Export-Package: com.kudram.karaf.shell;version="1.0.0";uses:="org.apache
+ .karaf.shell.api.action,org.apache.karaf.shell.api.action.lifecycle"
+Import-Package: org.apache.karaf.shell.api.action;version="[4.0,5)",org.
+ apache.karaf.shell.api.action.lifecycle;version="[4.0,5)"
+Karaf-Commands: com.kudram.karaf.shell*
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.6))"
+Tool: Bnd-3.0.0.201509101326
