@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1479503729447
+Build-Jdk: 1.8.0_11
+Built-By: marduk
+Bundle-ManifestVersion: 2
+Bundle-Name: Your Branding Bundle Name
+Bundle-SymbolicName: manual
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: org.apache.karaf.branding;version="1.0.0"
+Spring-Context: *;public-context:=false
+Tool: Bnd-3.2.0.201605172007
