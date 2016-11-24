@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<features>
+
+    <feature name='moduleA' version='1.0-SNAPSHOT'>
+        <bundle>mvn:com.kudram/moduleA/1.0-SNAPSHOT</bundle>
+    </feature>
+
+    <feature name='moduleB' version='1.0-SNAPSHOT'>
+        <bundle>mvn:com.kudram/moduleB/1.0-SNAPSHOT</bundle>
+    </feature>
+
+    <feature name='kudram-all-modules' version='1.0-SNAPSHOT'>
+        <feature version='1.0-SNAPSHOT'>moduleA</feature>
+        <feature version='1.0-SNAPSHOT'>moduleB</feature>
+    </feature>
+
+</features>
