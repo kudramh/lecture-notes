@@ -1,4 +1,6 @@
-example.property: "I AM IN THE DEFAULT"
+echo.message.preffix: "DEFAULT::Alfa::Microservice" 
+echo.message.remote.service: "beta.microservice" 
+
 #spring.jpa.database: "POSTGRESQL"
 #spring.datasource.platform:  "postgres"
 #spring.jpa.show-sql: "true"

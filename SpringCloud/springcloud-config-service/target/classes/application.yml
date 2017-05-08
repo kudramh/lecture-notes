@@ -32,7 +32,7 @@ spring:
      config:
        server:
            native:
-               searchLocations: classpath:config/,classpath:config/alfa.microservice
+               searchLocations: classpath:config/,classpath:config/alfa.microservice,classpath:config/beta.microservice
 #              searchLocations: file://<chapter 3>/confsvr/src/main/resources/config/licensingservice,
 #                               file://<chapter 3>confsvr/src/main/resources/config/organizationservice
 

@@ -1,38 +1,44 @@
 package com.kudram.springcloud.microservice.controller;
 
-import org.springframework.http.HttpStatus;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.kudram.springcloud.microservice.service.client.ExternalServiceClient;
+import com.kudram.springcloud.microservice.service.logic.ServiceLogic;
+import com.kudram.springcloud.microservice.vo.ServiceMessage;
+
 @RestController
-@RequestMapping(value="v1/organizations/{organizationId}/licenses")
+@RequestMapping(value="v1/echo/message")
 public class ServiceController {
-//    @Autowired
-//    private LicenseService licenseService;
+    
+	@Autowired
+    private ServiceLogic serviceLogic;
+	
+	@Autowired
+	private ExternalServiceClient client;
 
-    @RequestMapping(value="/{licenseId}",method = RequestMethod.GET)
-    public String getLicenses( @PathVariable("organizationId") String organizationId,
-                               @PathVariable("licenseId") String licenseId) {
-//        String
-    	return String.format("License %s / %s", organizationId, licenseId);
+    @RequestMapping(value="/service",method = RequestMethod.POST)
+    public ServiceMessage echoService( @PathVariable("echoMessage") String echoMessage) {    	
+    	ServiceMessage message = serviceLogic.doLogic(echoMessage);    	
+        return message;
     }
 
-    @RequestMapping(value="{licenseId}",method = RequestMethod.PUT)
-    public String updateLicenses( @PathVariable("licenseId") String licenseId) {
-        return String.format("This is the put");
+    @RequestMapping(value="/client/discovery",method = RequestMethod.GET)
+    public ServiceMessage echoDiscoveryClient( @PathVariable("echoMessage") String echoMessage) {    	
+    	return client.getRemoteServiceByDiscoveryClient(echoMessage);
     }
 
-    @RequestMapping(value="{licenseId}",method = RequestMethod.POST)
-    public String saveLicenses( @PathVariable("licenseId") String licenseId) {
-        return String.format("This is the post");
+    @RequestMapping(value="/client/ribbon",method = RequestMethod.GET)
+    public ServiceMessage echoRibbonClient( @PathVariable("echoMessage") String echoMessage) {
+    	return client.getRemoteServiceByRibbonClient(echoMessage);
     }
 
-    @RequestMapping(value="{licenseId}",method = RequestMethod.DELETE)
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public String deleteLicenses( @PathVariable("licenseId") String licenseId) {
-        return String.format("This is the Delete");
+    @RequestMapping(value="/client/feign",method = RequestMethod.GET)
+    public ServiceMessage echoFeignClient( @PathVariable("echoMessage") String echoMessage) {
+    	return client.getRemoteServiceByFeignClient(echoMessage);
     }
+    
 }

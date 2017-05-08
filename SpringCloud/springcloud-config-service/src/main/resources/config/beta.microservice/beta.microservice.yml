@@ -1,5 +1,5 @@
-echo.message.preffix: "DEFAULT::Alfa::Microservice" 
-echo.message.remote.service: "beta.microservice" 
+echo.message.preffix: "DEFAULT::Beta::Microservice" 
+echo.message.remote.service: "alfa.microservice" 
 
 #spring.jpa.database: "POSTGRESQL"
 #spring.datasource.platform:  "postgres"
