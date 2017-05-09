@@ -56,7 +56,9 @@ public class ExternalServiceClient {
 	@Autowired
 	ExternalFeignClient feignClient;
 	public ServiceMessage getRemoteServiceByFeignClient(String echoMessage){
-		return feignClient.getRemoteServiceByFeign(echoMessage);
+		ServiceMessage responseMessage = feignClient.getRemoteServiceByFeign(echoMessage);
+		responseMessage.setClientName( config.getServiceName() );
+		return responseMessage;
 	}
 
 }

@@ -26,9 +26,8 @@ public class ExternalServiceClient {
 		if (instances.size()==0) {
 			return null;
 		}
-		String serviceUri = String.format("%s/v1/echo/message", 
-			instances.get(0).getUri().toString(),
-			echoMessage
+		String serviceUri = String.format("%s/v1/echo/message/service", 
+			instances.get(0).getUri().toString()
 		);
 		ResponseEntity<ServiceMessage> restExchange = restTemplate.exchange(
 			serviceUri,
@@ -44,7 +43,7 @@ public class ExternalServiceClient {
 	RestTemplate lbRestTemplate;
 	public ServiceMessage getRemoteServiceByRibbonClient(String echoMessage){
 		ResponseEntity<ServiceMessage> restExchange = lbRestTemplate.exchange(
-			String.format("http://%s/v1/echo/message", config.getEchoMessageRemoteService()),
+			String.format("http://%s/v1/echo/message/service", config.getEchoMessageRemoteService()),
 			HttpMethod.POST,
 			null, 
 			ServiceMessage.class, 
@@ -56,7 +55,9 @@ public class ExternalServiceClient {
 	@Autowired
 	ExternalFeignClient feignClient;
 	public ServiceMessage getRemoteServiceByFeignClient(String echoMessage){
-		return feignClient.getRemoteServiceByFeign(echoMessage);
+		ServiceMessage responseMessage = feignClient.getRemoteServiceByFeign(echoMessage);
+		responseMessage.setClientName( config.getServiceName() );
+		return responseMessage;
 	}
 
 }

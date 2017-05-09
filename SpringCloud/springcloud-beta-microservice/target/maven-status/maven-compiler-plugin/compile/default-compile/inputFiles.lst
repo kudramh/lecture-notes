@@ -1,2 +1,7 @@
-C:\Users\kudra\Documents\WORKSPACE\lecture-notes\SpringCloud\springcloud-alfa-microservice\src\main\java\com\kudram\springcloud\microservice\Application.java
-C:\Users\kudra\Documents\WORKSPACE\lecture-notes\SpringCloud\springcloud-alfa-microservice\src\main\java\com\kudram\springcloud\microservice\controller\ServiceController.java
+C:\Users\kudra\Documents\WORKSPACE\lecture-notes\SpringCloud\springcloud-beta-microservice\src\main\java\com\kudram\springcloud\microservice\vo\ServiceMessage.java
+C:\Users\kudra\Documents\WORKSPACE\lecture-notes\SpringCloud\springcloud-beta-microservice\src\main\java\com\kudram\springcloud\microservice\config\ServiceConfig.java
+C:\Users\kudra\Documents\WORKSPACE\lecture-notes\SpringCloud\springcloud-beta-microservice\src\main\java\com\kudram\springcloud\microservice\Application.java
+C:\Users\kudra\Documents\WORKSPACE\lecture-notes\SpringCloud\springcloud-beta-microservice\src\main\java\com\kudram\springcloud\microservice\service\client\ExternalServiceClient.java
+C:\Users\kudra\Documents\WORKSPACE\lecture-notes\SpringCloud\springcloud-beta-microservice\src\main\java\com\kudram\springcloud\microservice\controller\ServiceController.java
+C:\Users\kudra\Documents\WORKSPACE\lecture-notes\SpringCloud\springcloud-beta-microservice\src\main\java\com\kudram\springcloud\microservice\service\logic\ServiceLogic.java
+C:\Users\kudra\Documents\WORKSPACE\lecture-notes\SpringCloud\springcloud-beta-microservice\src\main\java\com\kudram\springcloud\microservice\service\client\ExternalFeignClient.java

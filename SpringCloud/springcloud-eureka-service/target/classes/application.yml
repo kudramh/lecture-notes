@@ -1,12 +1,9 @@
 #Default port is 8761
-
 management:
   security:
     enabled: false
-
 server:
   port: 8761
-
 eureka:
   client:
     registerWithEureka: false

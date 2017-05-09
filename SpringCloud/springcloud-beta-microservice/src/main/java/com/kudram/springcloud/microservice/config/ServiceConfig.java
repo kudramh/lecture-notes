@@ -11,6 +11,9 @@ public class ServiceConfig{
 
   @Value("${echo.message.remote.service}")
   private String echoMessageRemoteService="";
+
+  @Value("${spring.application.name}")
+  private String serviceName="";
   
   public String getEchoMessagePrefix(){
     return echoMessagePrefix;
@@ -18,6 +21,10 @@ public class ServiceConfig{
   
   public String getEchoMessageRemoteService(){
 	return echoMessageRemoteService;	  
+  }
+
+  public String getServiceName(){
+	return serviceName;	  
   }
   
 }

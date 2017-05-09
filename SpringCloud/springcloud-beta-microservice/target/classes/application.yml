@@ -1,6 +1,8 @@
 management:
     security:
         enabled: false
+server:
+  port: 7172
 eureka:
   instance:
     preferIpAddress: true

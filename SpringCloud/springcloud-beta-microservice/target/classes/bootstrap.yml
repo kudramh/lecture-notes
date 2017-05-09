@@ -1,6 +1,6 @@
 spring:
   application:
-    name: alfa.microservice
+    name: beta.microservice
   profiles:
     active:
       default
