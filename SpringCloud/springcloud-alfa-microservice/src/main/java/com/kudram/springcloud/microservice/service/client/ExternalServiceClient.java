@@ -1,6 +1,7 @@
 package com.kudram.springcloud.microservice.service.client;
 
 import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
@@ -11,6 +12,7 @@ import org.springframework.web.client.RestTemplate;
 
 import com.kudram.springcloud.microservice.config.ServiceConfig;
 import com.kudram.springcloud.microservice.vo.ServiceMessage;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
 @Component
 public class ExternalServiceClient {
@@ -55,6 +57,7 @@ public class ExternalServiceClient {
 	
 	@Autowired
 	ExternalFeignClient feignClient;
+	@HystrixCommand
 	public ServiceMessage getRemoteServiceByFeignClient(String echoMessage){
 		ServiceMessage responseMessage = feignClient.getRemoteServiceByFeign(echoMessage);
 		responseMessage.setClientName( config.getServiceName() );
