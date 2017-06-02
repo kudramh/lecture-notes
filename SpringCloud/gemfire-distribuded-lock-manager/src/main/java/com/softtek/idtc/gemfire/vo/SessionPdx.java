@@ -24,7 +24,6 @@ public class SessionPdx implements PdxSerializable {
         this.lockStatus = false;
     }
 
-    @Override
     public void fromData(PdxReader reader) {
         id = reader.readInt("id");
         sessionName = reader.readString("sessionName");
@@ -33,7 +32,6 @@ public class SessionPdx implements PdxSerializable {
         updatedAt = reader.readDate("updatedAt");
     }
 
-    @Override
     public void toData(PdxWriter writer) {
         writer.writeInt("id", id)
               .markIdentityField("id") //identity field

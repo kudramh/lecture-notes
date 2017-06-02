@@ -29,7 +29,6 @@ public class LoggingCacheListener extends CacheListenerAdapter<String, PdxInstan
     /**
      * Initialize any properties in the specified in the cache.xml file.
      */
-    @Override
     public void init(Properties props) {
         // do nothing
     }

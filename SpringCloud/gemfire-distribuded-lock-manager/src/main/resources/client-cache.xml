@@ -3,13 +3,13 @@
         "-//GemStone Systems, Inc.//GemFire Declarative Caching 6.6//EN" "http://www.gemstone.com/dtd/cache6_6.dtd">
 
 <client-cache>
-    <pool name="idtcPool"  subscription-enabled="true" >
-        <server host="localhost" port="7178" />
+    <pool name="IDTCPool"  subscription-enabled="true" >
+        <server host="localhost" port="40404" />
     </pool>
 
     <pdx ignore-unread-fields="true"/>
 
-    <region name = "Sessions" >
-        <region-attributes refid="CACHING_PROXY" pool-name="idtcPool" />
+    <region name="IDTCSessions" >
+        <region-attributes refid="CACHING_PROXY" pool-name="IDTCPool" />
     </region>
 </client-cache>

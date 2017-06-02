@@ -5,11 +5,11 @@
   <pdx persistent="true" read-serialized="true" ignore-unread-fields="false"/>
 
   <!-- define a region to hold portfolio objects -->
-  <region name="Sessions">
+  <region name="IDTCSessions">
     <region-attributes data-policy="persistent-replicate">
-     <!--<cache-listener>-->
-       <!--<class-name> portableDataExchange.LoggingCacheListener </class-name>-->
-     <!--</cache-listener>-->
+     <cache-listener>
+       <class-name>com.softtek.idtc.gemfire.server.LoggingCacheListener</class-name>
+     </cache-listener>
     </region-attributes>
   </region>
 </cache>
